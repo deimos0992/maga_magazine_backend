@@ -1,0 +1,25 @@
+### DB Properties ###
+spring:
+  datasource:
+    driver-class-name: "com.mysql.cj.jdbc.Driver"
+    url: "jdbc:mysql://localhost:3306/maga-magazine?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Rome"
+    username: "root"
+    ## Commenta se devi collegarti con Xxamp
+    password: "root"
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+        dialect: "org.hibernate.dialect.MySQL5InnoDBDialect"
+    hibernate:
+      ddl-auto: "update"
+    show-sql: true
+  inizialize: true
+
+  logging:
+    level:
+      org:
+        hibernate:
+          SQL: DEBUG
+          type: TRACE
