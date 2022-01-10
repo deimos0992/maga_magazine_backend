@@ -1,17 +1,17 @@
 ### DB Properties ###
 spring:
   datasource:
-    driver-class-name: "com.mysql.cj.jdbc.Driver"
-    url: "jdbc:mysql://localhost:3306/maga-magazine?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Europe/Rome"
-    username: "root"
+    driver-class-name: "org.postgresql.Driver"
+    url: "jdbc:postgresql://ec2-63-33-239-176.eu-west-1.compute.amazonaws.com:5432/d21h8qsucj8hv4"
+    username: "htdorixzanadhq"
     ## Commenta se devi collegarti con Xxamp
-    password: "root"
+    password: "dc4bb9e2e0d6436d2f19c9cdfc343e2a04f2e19edf1f27ea3c3421b7f575c715"
   jpa:
     properties:
       hibernate:
         jdbc:
           time_zone: UTC
-        dialect: "org.hibernate.dialect.MySQL5InnoDBDialect"
+        dialect: "org.hibernate.dialect.PostgreSQLDialect"
     hibernate:
       ddl-auto: "update"
     show-sql: true
